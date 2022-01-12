@@ -1,0 +1,33 @@
+执行以下命令10次, 完成独立测试实验.
+
+python DeepGenGrep.py -gsr Splice_don -org hs -len 398 
+
+执行以下命令10次，完成消融第1层的实验。
+python analysis_model.py -gsr Splice_don -org hs -len 398 -layer 1 
+
+执行以下命令10次，完成消融第2层的实验。
+python analysis_model.py -gsr Splice_don -org hs -len 398 -layer 2 
+
+执行以下命令10次，完成消融第3层的实验。
+python analysis_model.py -gsr Splice_don -org hs -len 398 -layer 3
+
+执行以下命令10次，完成消融第4层的实验。
+python analysis_model.py -gsr Splice_don -org hs -len 398 -layer 4
+
+执行以下命令10次，完成消融第5层的实验。
+python analysis_model.py -gsr Splice_don -org hs -len 398 -layer 5
+
+
+Python DeepGenGrep.py –gsr TIS –org mm –len 600
+Python DeepGenGrep.py –gsr TIS –org bt –len 600
+Python DeepGenGrep.py –gsr TIS –org dm –len 600
+
+
+Python DeepGenGrep.py –gsr PAS –org mm –len 600
+Python DeepGenGrep.py –gsr PAS –org bt –len 600
+Python DeepGenGrep.py –gsr PAS –org dm –len 600
+
+python DeepGenGrep.py -gsr PAS_AATAAA -org hs -len 600
+Python DeepGenGrep.py –gsr PAS_AATAAA –org mm –len 600
+Python DeepGenGrep.py –gsr PAS_AATAAA –org bt –len 600
+Python DeepGenGrep.py –gsr PAS_AATAAA –org dm –len 600
