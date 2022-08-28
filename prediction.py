@@ -50,7 +50,7 @@ if gsr == 'TIS':
     GSR_model.load_weights(weight_file)
     pred_list = GSR_model.predict(seq)
     
-if gsr == 'PAS':
+if gsr == 'PAS' or 'PAS_AATAAA':
     sid, seq, sequence, unknownID = read_PAS_fasta(intputFileName)
     seq = list_matrix(seq, 600)
     GSR_model.load_weights(weight_file)
