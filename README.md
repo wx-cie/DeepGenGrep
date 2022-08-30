@@ -13,10 +13,12 @@ Kalkatawi, M., et al. DeepGSR: an optimized deep-learning structure for the reco
 
 -----------------------train model----------------------------------------------------------------------------------
 
-Train DeepGenGrep on human genome for TIS recognition as follows:
+Train DeepGenGrep on human genome for TIS recognition as follows:   
+
 python DeepGenGrep.py -gsr TIS -org hs -len 600
 
 Train DeepGenGrep on human genome for the recognition of PAS AATAAA signal as follows:
+
 python DeepGenGrep.py -gsr PAS_AATAAA -org hs -len 600
 
 Parameters and description are as follows:
