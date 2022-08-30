@@ -36,6 +36,7 @@ When we train the model on TIS and PAS signals, each sequence consists of 300 up
 When we predict TIS and PAS signals in test sequences. The length of input sequences is also 603 and 606 for prediction of TIS and PAS, respectively. If the length of sequences is less than 603 (for TIS) and 606 (for PAS), these sequences would be filtered out. If the length of sequences is more than 603 (for TIS) and 606 (for PAS), the model would cut long sequences into multiply overlap sequences with 603bp (for TIS) or 606 bp (for PAS).
 
 The common line of prediction is as follows:
+
 python prediction.py -gsr -TIS -org hs, -input test.fasta -out out
 
 ----------------------------------------------------------------------------------------------------------------
