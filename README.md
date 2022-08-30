@@ -11,7 +11,7 @@ All datasets employed are included in this project. These datasets are collected
 
 Kalkatawi, M., et al. DeepGSR: an optimized deep-learning structure for the recognition of genomic signals and regions. Bioinformatics 2019;35(7):1125-1132. 
 
------------------------train model-------------------------------------------------------------------------------------------------------------------------------------
+-----------------------train model-------------------------------------------------------------------------------------------------------------------------------
 Train DeepGenGrep on human genome for TIS recognition as follows:
 python DeepGenGrep.py -gsr TIS -org hs -len 600
 
@@ -27,14 +27,14 @@ The input dataset was first randomly split into the benchmark (75%) and independ
 
 Trained model is saved in the ‘Model’ fold, and the evaluated results is saved in ‘Results’ fold. Please do not change the directory including 'data', 'Model', and 'Results' in the project. 
 
----------------------Predciton-----------------------------------------------------------------------------------------------------------------------------------------
+---------------------Predciton---------------------------------------------------------------------------------------------------------------------------------
 When we train the model on TIS and PAS signals, each sequence consists of 300 upstream nucleotides, the considered signal variant and 300 downstream nucleotides. As a result, each PAS sequence has 606 nucleotides, while each TIS sequence has 603 nucleotides. For the splice site training dataset, the length of each sequence is 398-nt.
 When we predict TIS and PAS signals in test sequences. The length of input sequences is also 603 and 606 for prediction of TIS and PAS, respectively. If the length of sequences is less than 603 (for TIS) and 606 (for PAS), these sequences would be filtered out. If the length of sequences is more than 603 (for TIS) and 606 (for PAS), the model would cut long sequences into multiply overlap sequences with 603bp (for TIS) or 606 bp (for PAS).
 
 The common line of prediction is as follows:
 python prediction.py -gsr -TIS -org hs, -input test.fasta -out out
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 CONTACTS
 
