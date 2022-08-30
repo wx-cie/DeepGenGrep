@@ -44,9 +44,7 @@ def read_TIS_Fasta(filename):
                     seq.append(msg)
                     if i>0:
                         sids.append(sid)
-
-
-
+  
     return sids, seq, sequence, unknown_id
 
 def read_PAS_fasta(filename):
@@ -74,7 +72,6 @@ def read_PAS_fasta(filename):
                     seq.append(msg)
                     if i>0:
                         sids.append(sid)
-
 
     return sids, seq, sequence, unknown_id
 
