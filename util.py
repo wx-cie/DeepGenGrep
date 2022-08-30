@@ -37,9 +37,16 @@ def read_TIS_Fasta(filename):
                 sequence.append(msg)
                 unknown_id.append(id)
             else:
-                msg = s[0:300]+s[303:603]
-                sequence.append(msg)
-                seq.append(msg)
+                for i in range(len(s)-602):
+                    temp=s[i:i+603]
+                    msg = temp[0:300] + temp[303:603]
+                    sequence.append(msg)
+                    seq.append(msg)
+                    if i>0:
+                        sids.append(sid)
+
+
+
     return sids, seq, sequence, unknown_id
 
 def read_PAS_fasta(filename):
@@ -60,9 +67,14 @@ def read_PAS_fasta(filename):
                 sequence.append(msg)
                 unknown_id.append(id)
             else:
-                msg = s[0:300] + s[306:606]
-                sequence.append(msg)
-                seq.append(msg)
+                for i in range(len(s)-605):
+                    temp=s[i:i+606]
+                    msg = temp[0:300] + temp[306:606]
+                    sequence.append(msg)
+                    seq.append(msg)
+                    if i>0:
+                        sids.append(sid)
+
 
     return sids, seq, sequence, unknown_id
 
@@ -108,3 +120,4 @@ def calculate_M(organism, chr_id, ids, seq, results,site, cutoff, unknown):
     else:
         df2 = pds.DataFrame(res_arr1, columns=["Organism", "Sequence ID", "Sequence" ,"Is "+site+" contained?", "The probability"])
     return df2
+
