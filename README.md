@@ -40,6 +40,8 @@ The common line of prediction is as follows:
 python prediction.py -gsr -TIS -org hs, -input test.fasta -out out
 
 ----------------------------------------------------------------------------------------------------------------
+if you can doanloed the data please use the Goole Drive.  [data]: https://drive.google.com/file/d/1P4MgOK7BVf9D1zbysPt3aHaK3IUhbG63/view?usp=sharing
+----------------------------------------------------------------------------------------------------------------
 
 CONTACTS
 
